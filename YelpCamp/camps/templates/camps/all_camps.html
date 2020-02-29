@@ -1,0 +1,15 @@
+{% extends 'users/base.html' %}
+
+{% block title %}
+Campgrounds - Home
+{% endblock %}
+
+{% block content %}
+    {% if camps %}
+        {% for camp in camps %}
+            <ul>
+                <li><a href="{% url 'camp' camp.id %}">{{ camp.name }}</a></li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
