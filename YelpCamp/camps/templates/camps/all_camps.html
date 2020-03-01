@@ -1,4 +1,5 @@
 {% extends 'users/base.html' %}
+{% load static %}
 
 {% block title %}
 Campgrounds - Home
@@ -6,10 +7,19 @@ Campgrounds - Home
 
 {% block content %}
     {% if camps %}
-        {% for camp in camps %}
-            <ul>
-                <li><a href="{% url 'camp' camp.id %}">{{ camp.name }}</a></li>
-            </ul>
-        {% endfor %}
+        <div class="row">
+            {% for camp in camps %}
+                <div class="col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="/media/{{ camp.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ camp.name }}</h5>
+                                <p class="card-text">{{ camp.content }}</p>
+                                <a href="{% url 'camp' camp.id %}" class="btn btn-outline-primary">View Campsite</a>
+                            </div>
+                        </div>
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
 {% endblock %}

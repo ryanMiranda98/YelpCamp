@@ -1,0 +1,24 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6 divider-left">
+                <img src="{% static 'images/campfire.svg' %}" alt="">
+            </div>
+            <div class="col-lg-6 divider-right text-center">
+                <h3>Hi There!</h3>
+                <p>I'm Ryan Miranda, and I've made this website as a beginner project using Django and some Bootstrap along with 
+                    basic HTML/CSS/JS to give it a richer look.
+                </p>
+                <p>YelpCamp is a website that lets you create, search and review campsites around the world.</p>
+                <p>Sign up today and explore the wilderness!</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
