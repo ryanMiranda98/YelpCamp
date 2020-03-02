@@ -5,11 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container"> 
-        <h1>{{ camp.name }}</h1>
-        <p>Posted on: {{ camp.posted_date }}</p>
-        <p>Created by: {{ camp.user }}</p>
-        <hr>
-        <p>{{ camp.content }}</p>
+    <div class="container d-flex justify-content-center"> 
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-header" style="background-color: #fff;">
+                        <div class="card-title">
+                            <h3>{{ camp.name }}</h3>
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="{{ camp.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">{{ camp.content }}</p>
+                      <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
