@@ -31,7 +31,7 @@ def updateCamp(request, pk):
     camp = get_object_or_404(Camp, pk=pk)
     task = 'Update'
     
-    form = CreateCampForm(instance=camp)
+    # form = CreateCampForm(instance=camp)
     
     if request.method == "POST":
         form = CreateCampForm(request.POST, instance=camp)

@@ -1,15 +1,22 @@
 body{
     margin: 0;
     padding: 0;
+    /* position: relative; */
 }
 
 .main-container{
     margin-top: 16px;
 }
 
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+  }
+
 .footer{
     width: 100%;
-    height: 100%;
     background-color: #343a40;
     margin-top: 16px;
 }
@@ -42,4 +49,27 @@ body{
 
 .divider-right{
     border-left: 0.1px solid #EEE;
+}
+
+#about-title{
+    font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 40px;
+}
+
+#about-text{
+    font-family: 'DM Sans';
+}
+
+#landing-title{
+    font-size: 50px;
+    font-family: 'Open Sans';
+}
+
+.reset-img-done{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+
 }

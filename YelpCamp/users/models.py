@@ -8,7 +8,7 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender = models.CharField(max_length=10, choices=GENDER)
-    profile_img = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    profile_img = models.ImageField(default='20190624_185414.jpg', upload_to='profile_pics')
 
     def __str__(self):
         user_profile = self.user.username + " Profile"

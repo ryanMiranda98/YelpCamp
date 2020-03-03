@@ -7,18 +7,22 @@ Home
 
 {% block content %}
     <div class="container">
-        <div class="row">
+        <div class="row" id="img-row-container">
             <div class="col-sm-6 text-center m-auto">
-                <h1>Plan your adventure,</h1>
-                <h1>Plan your camp</h1>
-                <h5>Make camping experiences better. Take a chance to get closer to nature and get away from the concrete jungle of a city</h5>
+                <p id="landing-title"">Plan your adventure,</p>
+                <p id="landing-title"">Plan your camp</p>
+                <p style="font-family: Open Sans; font-size: 18px;">Make camping experiences better. Take a chance to get closer to nature and get away from the concrete jungle of a city</p>
+                
+                <div style="margin-top: 30px;">
+                    <a href="{% url 'login' %}" class="btn btn-outline-dark" id="landing-button">Get Started</a>
+                </div>
             </div>
             <div class="col-sm-6">
-                <img src="{% static 'images/camp.jpg' %}" alt="" id="home_camp_img">
+                <img src="{% static 'images/night_camping.svg' %}" alt="" id="home_camp_img">
             </div>
         </div>
-        <hr>
-        <div class="row">
+        <!-- <hr> -->
+        <!-- <div class="row">
             <div class="col-sm-12 text-center">
                 <p class="landing-p">Choose from over 100 trusted campsites</p>
             </div>
@@ -64,6 +68,6 @@ Home
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->    
     </div>
 {% endblock %}
